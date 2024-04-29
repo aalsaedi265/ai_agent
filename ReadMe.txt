@@ -9,8 +9,15 @@ will see the thinking process of the model before result it provided
 
 #WILL use LLAMAINDEX because making models injest data is very tough this free service will allow us to only focus on the functionality and not making sure data is being injested properly 
 
+pandas reads csv file
+pypdf reads pdf file
+llama for setting the agent (behind the scenes magic)
+python-dotenv for loading secret env files to use
+
 
 #NOTES 
 
 py -m venv aiAgent
 .\aiAgent\Scripts\activate
+
+pip3 install llama-index pypdf python-dotenv pandas
