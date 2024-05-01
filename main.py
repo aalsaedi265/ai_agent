@@ -4,6 +4,10 @@ import os
 import pandas as pd
 from llama_index.experimental.query_engine import PandasQueryEngine
 from prompts import new_prompt, instruction_str
+from note_engine import note_engine
+from llama_index.core.tools import QueryEngineTool, ToolMetadata
+from llama_index.core.agent import ReActAgent
+from llama_index.core.llms import OpenAI
 load_dotenv()
 
 # Load the data

@@ -14,6 +14,8 @@ pypdf reads pdf file
 llama for setting the agent (behind the scenes magic)
 python-dotenv for loading secret env files to use
 
+the note file is an example in reality the llm  can go and call any function i want, whether it menaulated saved computer files or do math or what ever the goal is
+
 
 #NOTES 
 
