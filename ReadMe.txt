@@ -16,6 +16,8 @@ python-dotenv for loading secret env files to use
 
 the note file is an example in reality the llm  can go and call any function i want, whether it menaulated saved computer files or do math or what ever the goal is
 
+when saving to note, mention save to note then us these "" the item inside of them will be saved
+
 
 #NOTES 
 

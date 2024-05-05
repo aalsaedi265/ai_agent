@@ -7,6 +7,8 @@ from note_engine import note_engine
 from llama_index.core.tools import QueryEngineTool, ToolMetadata
 from llama_index.core.agent import ReActAgent
 from llama_index.llms.openai import OpenAI
+from pdf import usa_engine
+
 
 # Load environment variables
 load_dotenv()
@@ -24,10 +26,16 @@ population_query_engine = PandasQueryEngine(df=population_df, verbose=True, inst
 population_query_engine.update_prompts({"pandas_prompt": new_prompt})
 
 tools = [
-    note_engine, QueryEngineTool(query_engine=population_query_engine, metadata=ToolMetadata(
+    note_engine,
+    QueryEngineTool(query_engine=population_query_engine, metadata=ToolMetadata(
         name="population_data",
         description="this gives information at the world population and demographics"
-    ))
+    )),
+    QueryEngineTool(query_engine=usa_engine, metadata=ToolMetadata(
+        name="merica_data",
+        description="this gives information about Merica"
+    )),
+    
 ]
 
 # Initialize OpenAI API client with the API key
